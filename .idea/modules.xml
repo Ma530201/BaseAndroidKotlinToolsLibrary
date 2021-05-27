@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidKotlinLibrary/AndroidKotlinLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidKotlinLibrary/AndroidKotlinLibrary.iml" group="BaseAndroidKotlinToolsLibrary/AndroidKotlinLibrary" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BaseAndroidKotlinToolsLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/BaseAndroidKotlinToolsLibrary.iml" group="BaseAndroidKotlinToolsLibrary" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="BaseAndroidKotlinToolsLibrary/app" />
     </modules>
   </component>
 </project>

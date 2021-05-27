@@ -1,5 +1,6 @@
 package com.ronsu.androidkotlinlibrary.general
 
+import android.annotation.SuppressLint
 import android.content.Context
 import java.text.SimpleDateFormat
 import java.util.*
@@ -11,6 +12,7 @@ import java.util.*
  * 修改人:Playsuer-Ron
  * 修改時間:2021/5/27 上午 09:44
  * 修改備註: * @version */
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class AppInfo {
     //    fun getVersionName(context: Context): String {
 //        return BuildConfig.VERSION_NAME
@@ -47,6 +49,7 @@ class AppInfo {
     }
 
     /** set sharedPreferences string value **/
+    @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesStringValue(
         context: Context,
         preferencesName: String,
@@ -71,6 +74,7 @@ class AppInfo {
     }
 
     /** set sharedPreferences int value **/
+    @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesIntValue(
         context: Context,
         preferencesName: String,
@@ -95,6 +99,7 @@ class AppInfo {
     }
 
     /** set sharedPreferences boolean value **/
+    @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesBooleanValue(
         context: Context,
         preferencesName: String,
@@ -119,6 +124,7 @@ class AppInfo {
     }
 
     /** set sharedPreferences float value **/
+    @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesFloatValue(
         context: Context,
         preferencesName: String,
@@ -143,6 +149,7 @@ class AppInfo {
     }
 
     /** set sharedPreferences long value **/
+    @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesLongValue(
         context: Context,
         preferencesName: String,
