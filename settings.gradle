@@ -1,0 +1,2 @@
+include ':app',':AndroidKotlinLibrary'
+rootProject.name = "BaseAndroidKotlinToolsLibrary"
