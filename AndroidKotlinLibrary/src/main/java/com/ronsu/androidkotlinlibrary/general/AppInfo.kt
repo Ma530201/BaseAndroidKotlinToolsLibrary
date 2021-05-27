@@ -2,6 +2,8 @@ package com.ronsu.androidkotlinlibrary.general
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -14,13 +16,37 @@ import java.util.*
  * 修改備註: * @version */
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class AppInfo {
-    //    fun getVersionName(context: Context): String {
+//    fun getVersionName(context: Context): String {
 //        return BuildConfig.VERSION_NAME
 //    }
+    fun getVersionName(context: Context): String {
+        val packageManager = context.packageManager
+        val packageInfo: PackageInfo
+        var versionName = ""
+        try {
+            packageInfo = packageManager.getPackageInfo(context.packageName, 0)
+            versionName = packageInfo.versionName.toString()
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
+        return versionName
+    }
 
 //    fun getVersionCode(context: Context): Int {
 //        return BuildConfig.VERSION_CODE
 //    }
+    fun getVersionCode(context: Context): Int {
+        val packageManager = context.packageManager
+        val packageInfo: PackageInfo
+        var versionCode = 0
+        try {
+            packageInfo = packageManager.getPackageInfo(context.packageName, 0)
+            versionCode = packageInfo.versionCode
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
+        return versionCode
+    }
 
 //    fun getApplicationID(context: Context):String{
 //        return BuildConfig.APPLICATION_ID

@@ -16,12 +16,11 @@ import android.content.Context
  * transitions.setAnimation(content,Transitions(arrayOf(R.anim.zoom_in, R.anim.zoom_out)))
  **/
 
-class Transitions {
+class Transitions (private val context: Context) {
     /**
      * @param effects is animation array
-     * @param context Context
      **/
-    fun setAnimation(context: Context, effects: Array<Int>) {
+    fun setAnimation(effects: Array<Int>) {
         (context as Activity).overridePendingTransition(effects[0], effects[1])
     }
 }
