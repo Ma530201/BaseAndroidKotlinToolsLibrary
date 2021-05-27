@@ -14,7 +14,7 @@ import java.util.*
  * 修改人:Playsuer-Ron
  * 修改時間:2021/5/27 上午 09:44
  * 修改備註: * @version */
-@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS", "DEPRECATION")
 class AppInfo (private val context: Context){
 //    fun getVersionName(context: Context): String {
 //        return BuildConfig.VERSION_NAME
