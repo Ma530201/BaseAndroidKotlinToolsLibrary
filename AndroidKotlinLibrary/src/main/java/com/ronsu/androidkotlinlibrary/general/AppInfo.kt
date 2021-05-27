@@ -15,11 +15,11 @@ import java.util.*
  * 修改時間:2021/5/27 上午 09:44
  * 修改備註: * @version */
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-class AppInfo {
+class AppInfo (private val context: Context){
 //    fun getVersionName(context: Context): String {
 //        return BuildConfig.VERSION_NAME
 //    }
-    fun getVersionName(context: Context): String {
+    fun getVersionName(): String {
         val packageManager = context.packageManager
         val packageInfo: PackageInfo
         var versionName = ""
@@ -35,7 +35,7 @@ class AppInfo {
 //    fun getVersionCode(context: Context): Int {
 //        return BuildConfig.VERSION_CODE
 //    }
-    fun getVersionCode(context: Context): Int {
+    fun getVersionCode(): Int {
         val packageManager = context.packageManager
         val packageInfo: PackageInfo
         var versionCode = 0
@@ -77,7 +77,6 @@ class AppInfo {
     /** set sharedPreferences string value **/
     @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesStringValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String,
@@ -90,7 +89,6 @@ class AppInfo {
 
     /** get sharedPreferences string value **/
     fun getSharedPreferencesStringValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String
@@ -102,7 +100,6 @@ class AppInfo {
     /** set sharedPreferences int value **/
     @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesIntValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String,
@@ -115,7 +112,6 @@ class AppInfo {
 
     /** get sharedPreferences int value **/
     fun getSharedPreferencesIntValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String
@@ -127,7 +123,6 @@ class AppInfo {
     /** set sharedPreferences boolean value **/
     @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesBooleanValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String,
@@ -140,7 +135,6 @@ class AppInfo {
 
     /** get sharedPreferences boolean value **/
     fun getSharedPreferencesBooleanValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String
@@ -152,7 +146,6 @@ class AppInfo {
     /** set sharedPreferences float value **/
     @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesFloatValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String,
@@ -165,7 +158,6 @@ class AppInfo {
 
     /** get sharedPreferences float value **/
     fun getSharedPreferencesFloatValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String
@@ -177,7 +169,6 @@ class AppInfo {
     /** set sharedPreferences long value **/
     @SuppressLint("ApplySharedPref")
     fun setSharedPreferencesLongValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String,
@@ -190,7 +181,6 @@ class AppInfo {
 
     /** get sharedPreferences Long value **/
     fun getSharedPreferencesLongValue(
-        context: Context,
         preferencesName: String,
         privateLevel: Int,
         key: String
